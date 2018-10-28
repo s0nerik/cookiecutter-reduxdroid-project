@@ -2,13 +2,13 @@ package {{ cookiecutter.package_name }}.core.util
 
 import kotlin.coroutines.CoroutineContext
 
-interface ContextHolder {
+interface CoroutineContextHolder {
     val main: CoroutineContext
     val io: CoroutineContext
     val bg: CoroutineContext
 }
 
-internal data class MainContextHolder(
+internal data class CoroutineContextHolderImpl(
         override val main: CoroutineContext,
         override val io: CoroutineContext,
         override val bg: CoroutineContext
